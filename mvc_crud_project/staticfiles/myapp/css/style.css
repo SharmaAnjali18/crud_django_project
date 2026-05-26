@@ -1,0 +1,122 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background Gradient: Black + Dark Gray + Red */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #000000, #2b2b2b, #b30000);
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* Background Animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Form Box (Glass Effect) */
+.form_box {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  width: 480px;
+  padding: 35px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form_box h2 {
+  color: #ffffff;
+}
+
+.form_box h6 {
+  color: #ffffff;
+}
+
+/* Labels */
+.form_box label {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+/* Inputs */
+.form_box input[type="text"],
+.form_box input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+/* Placeholder color */
+.form_box input::placeholder {
+  color: #cccccc;
+}
+
+/* Input focus effect */
+.form_box input:focus {
+  border-color: #ff0000;
+  box-shadow: 0px 0px 8px rgba(255, 0, 0, 0.7);
+}
+
+/* Submit Button */
+.form_box input[type="submit"], input[type="reset"]{
+  width: 100%;
+  padding: 12px;
+  background: #ff0000;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: 0.3s ease;
+}
+
+/* Button group */
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 25px;
+  width: 100%;
+}
+
+/* Button Hover */
+.form_box input[type="submit"]:hover, input[type="reset"]:hover {
+  background: #cc0000;
+  box-shadow: 0px 0px 10px rgba(255, 0, 0, 1);
+}
+
+.table-container {
+  width: 80%;
+}
